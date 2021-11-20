@@ -1,5 +1,4 @@
 const { Schema, model, Types } = require("mongoose");
-const dateFormat = require("../utils/dateFormat");
 
 const UserSchema = new Schema(
   {
@@ -31,8 +30,8 @@ const UserSchema = new Schema(
   {
     // tells mongoose to use these funtions
     toJSON: {
-      virtuals: true,
       getters: true,
+      virtuals: true,
     },
     // id is set to false because Mongoose returns a virtuals not needing an id
     id: false,
@@ -46,3 +45,7 @@ UserSchema.virtual(friendCount).get(function () {
     0
   );
 });
+
+const User = model("User", UserSchema);
+
+module.exports = User;
