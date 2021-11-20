@@ -29,6 +29,7 @@ const ThoughtSchema = new Schema(
   }
 );
 
+// subDocument schema in the Thought model
 const ReactionSchema = new Schema(
   {
     reactionId: {
@@ -45,6 +46,11 @@ const ReactionSchema = new Schema(
       required: "You need to provide your name.",
       trim: true,
     },
+    createdAt: {
+        type: Date,
+        default: Date.now,
+        get: (createdAtVal) => dateFormat(createdAtVal),
+      },
   },
   {
     toJSON: {
