@@ -2,7 +2,7 @@ const router = require('express').Router();
 
 const {
     getAllThought,
-    createThought,
+    addThought,
     getThoughtById,
     updateThought,
     deleteThought,
@@ -16,7 +16,7 @@ const {
 // CRUD routes for api/thoughts
 router
 .get(getAllThought)
-.post(createThought)
+.post(addThought)
 
 // CRUD routes for api/thoughts/:id
 router

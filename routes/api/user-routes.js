@@ -4,7 +4,7 @@ const router = require('express').Router();
 const {
     getAllUser,
     getUserById,
-    createUser,
+    addUser,
     updateUser,
     deleteUser,
     addNewFriend,
@@ -16,7 +16,7 @@ const {
 router
 .route('/')
 .get(getAllUser)
-.post(createUser);
+.post(addUser);
 
 
 // CRUD routes for api/users/:userId
@@ -32,3 +32,4 @@ router
 .delete(deleteFriend)
 
 module.exports = router;
+

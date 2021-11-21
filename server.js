@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3008;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 // don't need since we're not serving up any html??
-app.use(express.static("public"));
+// app.use(express.static("public"));
 
 // relative path?
 app.use(require("./routes"));
