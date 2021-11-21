@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 // app.use(express.static("public"));
 
 // relative path?
-app.use(require("./routes"));
+app.use(require('./routes'));
 
 // tell Mongoose which db to connect to || if MONGODB_URI exists (heroku)
 mongoose.connect(

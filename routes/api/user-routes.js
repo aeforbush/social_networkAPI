@@ -12,22 +12,22 @@ const {
 
 } = require('../../controllers/user-controller');
 
-// set up GET, POST, PUT and DELETE at api/users 
+// set up GET all, and POST at /api/users 
 router
 .route('/')
 .get(getAllUser)
 .post(addUser);
 
 
-// CRUD routes for api/users/:userId
-router
+// set up GET one, PUT, and DELETE at /api/users/:userId
+router('/:userId')
 .get(getUserById)
 .put(updateUser)
 .deleteUser(deleteUser);
 // bonus remove user's associated thoughts when deleted
 
-// CRUD routes for api/users/:userId/friends/:friendId
-router
+// set up ADD and DELETE a friend at /api/users/:userId/friends/:friendId
+router('/:userId/friends/:friendId')
 .post(addNewFriend)
 .delete(deleteFriend)
 
