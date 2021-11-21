@@ -44,22 +44,9 @@ const userController = {
 
   // create User by destructuring the body out of the express req object
   addUser({ body }, res) {
-    // the where clause is used first in mongoose, then data, then return option
-    User.findOneAndUpdate({ _id: params.id }, body, {
-      new: true,
-      runValidators: true,
-    })
-      .then((dbUserData) => {
-        if (!dbUserData) {
-          res.status(404).json({ message: "No user found with this id." });
-          return;
-        }
-        res.json(dbUserData);
-      })
-      .catch((err) => {
-        console.log(err);
-        res.status(400).json(err);
-      });
+    User.create(body)
+    .then((dbUserData) => res.json(dbUserData))
+    .catch((err) => res.status(400).json(err))
   },
 
   // update User by id
