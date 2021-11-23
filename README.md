@@ -26,7 +26,7 @@ Social Network API is a back-end solution for a social-networking site using Mon
 
 
 ## Video
-* Walkthrough Video 👇
+* 👇 Walkthrough Video 
 * [![Google Drive](https://img.shields.io/badge/Google%20Drive-4285F4?style=for-the-badge&logo=googledrive&logoColor=white)](https://www.icloud.com/iclouddrive/0-HMpTDuXOcbq5QhurYQGpXdQ#Social_Network_API)
 
 ## Authors
